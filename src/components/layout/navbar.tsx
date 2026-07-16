@@ -44,7 +44,7 @@ export default function Navbar() {
             </li>
             {categories.slice(0, 3).map((cat) => (
               <li key={cat.id}>
-                <Link href={cat.path} className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                <Link href={`/search/${cat.slug}`} className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
                   {cat.title}
                 </Link>
               </li>
@@ -107,7 +107,7 @@ export default function Navbar() {
             </form>
             <Link href="/search" className="text-black dark:text-white" onClick={() => setIsMobileMenuOpen(false)}>All</Link>
             {categories.map((cat) => (
-              <Link key={cat.id} href={cat.path} className="text-black dark:text-white" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link key={cat.id} href={`/search/${cat.slug}`} className="text-black dark:text-white" onClick={() => setIsMobileMenuOpen(false)}>
                 {cat.title}
               </Link>
             ))}

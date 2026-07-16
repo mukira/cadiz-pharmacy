@@ -29,16 +29,7 @@ export const products = [
     "categoryId": "cat-1",
     "featured": true
   },
-  {
-    "id": "prod-1",
-    "slug": "la-roche-posay-anthelios-fluid-uvmune-400-spf50-50ml",
-    "name": "La Roche-Posay Anthelios Fluid UVMune 400 Spf50 50ml",
-    "description": "La Roche Posay Anthelios Shaka Fluid with spf50 is an ultra-resistant fluid that is a very high broad-spectrum sun protection fluid for a healthy glow effect. It is non-greasy, non eye stinging, water resistant, non-sticky with instant absorption and leaves no white marks and does not leave an ashy look.",
-    "price": 3200,
-    "image": "/images/products/la-roche-posay-anthelios-fluid-uvmune-400-spf50-50ml.png",
-    "categoryId": "cat-1",
-    "featured": true
-  },
+
   {
     "id": "prod-2",
     "slug": "postinor-2-tablets-2-s",
