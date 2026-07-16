@@ -2,7 +2,7 @@
 
 import { useCart, CartItem } from './cart-context';
 
-export default function AddToCart({ product }: { product: CartItem }) {
+export default function AddToCart({ product }: { product: Omit<CartItem, 'quantity'> }) {
   const { addItem } = useCart();
 
   return (
