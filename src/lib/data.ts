@@ -20,6 +20,16 @@ export const categories = [
 
 export const products = [
   {
+    "id": "prod-7",
+    "slug": "now-magnesium-glycinate-tablets-180-s",
+    "name": "Now Magnesium Glycinate Tablets 180's",
+    "description": "Magnesium glycinate utilizes magnesium bound to the amino acid glycine, which facilitates intestinal absorption.* Magnesium is a mineral that is critical for energy production and metabolism, muscle contraction, nerve impulse transmission, and bone mineralization.* It is a required cofactor for an estimated 300 enzymes.* Among the processes that require magnesium are fat and protein production, as well as glucose metabolism.* Magnesium status is also important for regulation of calcium balance t",
+    "price": 5086,
+    "image": "/images/products/now-magnesium-glycinate-tablets-180-s.jpg",
+    "categoryId": "cat-1",
+    "featured": true
+  },
+  {
     "id": "prod-1",
     "slug": "la-roche-posay-anthelios-fluid-uvmune-400-spf50-50ml",
     "name": "La Roche-Posay Anthelios Fluid UVMune 400 Spf50 50ml",
@@ -47,7 +57,7 @@ export const products = [
     "price": 2107,
     "image": "/images/products/zelaton-15-gel-30g.jpg",
     "categoryId": "cat-1",
-    "featured": true
+    "featured": false
   },
   {
     "id": "prod-4",
@@ -57,7 +67,7 @@ export const products = [
     "price": 3560,
     "image": "/images/products/la-roche-lipikar-baume-ap-m-400ml.jpg",
     "categoryId": "cat-1",
-    "featured": true
+    "featured": false
   },
   {
     "id": "prod-5",
@@ -67,7 +77,7 @@ export const products = [
     "price": 3764,
     "image": "/images/products/la-roche-posay-anthelios-shaka-spray-spf50-200ml.jpg",
     "categoryId": "cat-1",
-    "featured": true
+    "featured": false
   },
   {
     "id": "prod-6",
@@ -76,16 +86,6 @@ export const products = [
     "description": "This no white cast, lightweight SPF 50+ sunscreen infused with Hyaluronic Acid and African Aloe Vera is perfect for daily use. Protects skin from harmful UVA & UVB rays, prevents sun damage, premature skin ageing and dark spots, while keeping skin hydrated, moisturised and cool. Uncover Skincare has carefully been crafting this sunscreen for 2 years, studying the science of healthy skin with a team of formulation scientists in the worldâ€™s best labs to bring you the best quality products backed",
     "price": 2502,
     "image": "/images/products/uncover-aloe-invisible-sunscreen-80ml.jpg",
-    "categoryId": "cat-1",
-    "featured": false
-  },
-  {
-    "id": "prod-7",
-    "slug": "now-magnesium-glycinate-tablets-180-s",
-    "name": "Now Magnesium Glycinate Tablets 180's",
-    "description": "Magnesium glycinate utilizes magnesium bound to the amino acid glycine, which facilitates intestinal absorption.* Magnesium is a mineral that is critical for energy production and metabolism, muscle contraction, nerve impulse transmission, and bone mineralization.* It is a required cofactor for an estimated 300 enzymes.* Among the processes that require magnesium are fat and protein production, as well as glucose metabolism.* Magnesium status is also important for regulation of calcium balance t",
-    "price": 5086,
-    "image": "/images/products/now-magnesium-glycinate-tablets-180-s.jpg",
     "categoryId": "cat-1",
     "featured": false
   },
