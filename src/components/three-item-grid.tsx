@@ -21,10 +21,10 @@ function ThreeItemGridItem({
     >
       <Link
         href={`/product/${item.slug}`}
-        className="aspect-square md:aspect-auto group relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border border-neutral-200 bg-white p-12 md:p-24 lg:p-32 hover:border-blue-600 dark:border-neutral-800 dark:bg-white dark:hover:border-blue-600"
+        className="aspect-square md:aspect-auto group relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border border-neutral-200 bg-white hover:border-blue-600 dark:border-neutral-800 dark:bg-white dark:hover:border-blue-600"
       >
         <Image
-          className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+          className={`relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105 ${size === 'full' ? 'p-12 md:p-24 lg:p-32' : 'p-6 md:p-12 lg:p-16'}`}
           src={item.image}
           alt={item.name}
           width={size === 'full' ? 1080 : 540}
