@@ -23,17 +23,7 @@ export default function Footer() {
           <Link className="hover:text-black dark:hover:text-white transition-colors" href="/privacy">Privacy Policy</Link>
           <Link className="hover:text-black dark:hover:text-white transition-colors" href="/faq">FAQ</Link>
         </div>
-        <div className="md:ml-auto">
-          <a
-            className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
-            aria-label="Deploy on Vercel"
-            href="#"
-          >
-            <span className="px-3">▲</span>
-            <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
-            <span className="px-3">Deploy</span>
-          </a>
-        </div>
+
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
@@ -44,11 +34,7 @@ export default function Footer() {
           <p>
             <a href="#">View the source</a>
           </p>
-          <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-black dark:text-white">
-              Created by ▲ Vercel
-            </a>
-          </p>
+
         </div>
       </div>
     </footer>
