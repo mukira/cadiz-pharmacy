@@ -5,9 +5,11 @@ import { useSearchParams } from 'next/navigation';
 import { SearchIcon, CartIcon, MenuIcon, LogoIcon } from '../icons';
 import { categories } from '@/lib/data';
 
+import { useState } from 'react';
 import { useCart } from '../cart/cart-context';
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const searchParams = useSearchParams();
   const defaultValue = searchParams.get('q') || '';
   const { cartItems, openCart } = useCart();
@@ -18,7 +20,10 @@ export default function Navbar() {
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="flex w-full items-center">
         <div className="block flex-none md:hidden">
-          <button className="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white">
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white"
+          >
             <MenuIcon className="h-4 w-4" />
           </button>
         </div>
@@ -77,6 +82,38 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 flex h-full w-full flex-col bg-white p-4 dark:bg-black md:hidden">
+          <div className="flex w-full items-center justify-between pb-4">
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-4 w-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col gap-4 text-xl">
+            <form action="/search" className="mb-4 w-full" onSubmit={() => setIsMobileMenuOpen(false)}>
+              <input
+                type="text"
+                name="q"
+                defaultValue={defaultValue}
+                placeholder="Search for products..."
+                autoComplete="off"
+                className="w-full rounded-lg border bg-transparent px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:text-white dark:placeholder:text-neutral-400"
+              />
+            </form>
+            <Link href="/search" className="text-black dark:text-white" onClick={() => setIsMobileMenuOpen(false)}>All</Link>
+            {categories.map((cat) => (
+              <Link key={cat.id} href={`/search/${cat.slug}`} className="text-black dark:text-white" onClick={() => setIsMobileMenuOpen(false)}>
+                {cat.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
