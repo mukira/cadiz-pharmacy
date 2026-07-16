@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
           
           <p className="mb-6 text-sm leading-tight text-neutral-500">
-            {product.description || `Category: ${product.category}`}
+            {product.description || `Category ID: ${product.categoryId}`}
           </p>
 
           <AddToCart product={{

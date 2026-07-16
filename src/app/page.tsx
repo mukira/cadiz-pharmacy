@@ -4,7 +4,7 @@ import Grid from '@/components/grid';
 export default function HomePage() {
   return (
     <>
-      <div className="py-8">
+      <div className="pt-8 pb-0 md:pb-8">
         <ThreeItemGrid />
       </div>
       <div className="pb-8">
