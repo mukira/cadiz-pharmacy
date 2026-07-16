@@ -18,7 +18,7 @@ export default async function CategoryPage({
   const { q } = await searchParams;
   const searchQuery = typeof q === 'string' ? q : '';
 
-  const category = categories.find((c) => c.slug === categorySlug);
+  const category = categories.find((c) => c.path === `/search/${categorySlug}`);
   
   if (!category) {
     notFound();
